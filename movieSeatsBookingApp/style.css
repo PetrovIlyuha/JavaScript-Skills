@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #000346 0%, #ff0000 100%),
+    linear-gradient(58.72deg, #0029ff 0%, #aa0014 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #ff00a8 0%, #00ff47 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+  background-blend-mode: overlay, overlay, difference, normal;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: Lato;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: white;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 10px;
+  padding: 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 200px;
+}
+
+.seat {
+  background-color: darkgray;
+  height: 22px;
+  width: 20px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: lightyellow;
+}
+.seat.occupied {
+  background-color: darkslateblue;
+}
+
+.seat:nth-of-type(3) {
+  margin-left: 20px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 20px;
+}
+.seat:not(.occupied):hover {
+  transition: transform 0.2s ease-in-out;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background-color: rgba(19, 123, 244, 0.4);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-15deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text span {
+  color: yellow;
+}
