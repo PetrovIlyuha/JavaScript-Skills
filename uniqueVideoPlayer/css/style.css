@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Sigmar+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(301.28deg, #630000 0%, #000000 100%),
+    linear-gradient(121.28deg, #207a00 0%, #950000 100%),
+    linear-gradient(238.72deg, #ffb800 0%, #000000 100%),
+    linear-gradient(238.72deg, #00d1ff 0%, #a80000 100%),
+    linear-gradient(58.72deg, #b80000 0%, #1b00c2 100%),
+    linear-gradient(125.95deg, #00e0ff 10.95%, #87009d 100%),
+    linear-gradient(263.7deg, #b60000 3.43%, #b100a0 96.57%),
+    linear-gradient(320.54deg, #800000 0%, #00c2ff 72.37%),
+    linear-gradient(130.22deg, #8fa600 18.02%, #5a31ff 100%);
+  background-blend-mode: overlay, color-dodge, difference, lighten, difference,
+    color-dodge, difference, difference, normal;
+  font-family: Sigmar One;
+  background-repeat: no-repeat;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  margin: 0;
+}
+
+.screen {
+  cursor: pointer;
+  width: 60%;
+  background-color: #000 !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 10px;
+  /* margin-top: 100px; */
+  -webkit-box-shadow: 0px 5px 19px 0px rgba(107, 224, 224, 1);
+  -moz-box-shadow: 0px 5px 19px 0px rgba(107, 224, 224, 1);
+  box-shadow: 0px 5px 19px 0px rgba(107, 224, 224, 1);
+}
+
+.controls {
+  background: #333;
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  margin-bottom: 290px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 60%;
+  -webkit-box-shadow: 0px 5px 19px 0px rgba(107, 224, 224, 1);
+  -moz-box-shadow: 0px 5px 19px 0px rgba(107, 224, 224, 1);
+  box-shadow: 0px 5px 19px 0px rgba(107, 224, 224, 1);
+}
+
+.controls .btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.controls .fa-play {
+  color: #28a745;
+}
+
+.controls .fa-stop {
+  color: #dc3545;
+}
+.controls .fa-pause {
+  color: white;
+}
+
+.controls .timestamp {
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding-top: 100px;
+  }
+  .screen,
+  .controls {
+    width: 90%;
+  }
+}
