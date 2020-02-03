@@ -63,7 +63,7 @@
           <option value="PLN">PLN</option>
           <option value="PYG">PYG</option>
           <option value="RON">RON</option>
-          <option value="RUB" selected>RUB</option>
+          <option value="RUB">RUB</option>
           <option value="SAR">SAR</option>
           <option value="SEK">SEK</option>
           <option value="SGD">SGD</option>
@@ -71,17 +71,20 @@
           <option value="TRY">TRY</option>
           <option value="TWD">TWD</option>
           <option value="UAH">UAH</option>
-          <option value="USD">USD</option>
+          <option value="USD" selected>USD</option>
           <option value="UYU">UYU</option>
           <option value="VND">VND</option>
           <option value="ZAR">ZAR</option>
         </select>
         <input type="number" id="amount-one" placeholder="0" value="1" />
       </div>
-      <button class="button is-dark">Dark</button>
+      <div class="swap-rate-container">
+        <button class="button is-dark" id="swap">Swap Rates</button>
+        <div class="rate" id="rate"></div>
+      </div>
       <div class="currency-two">
         <div class="currency">
-          <select id="currency-one">
+          <select id="currency-two">
             <option value="AED">AED</option>
             <option value="ARS">ARS</option>
             <option value="AUD">AUD</option>
@@ -122,7 +125,7 @@
             <option value="PLN">PLN</option>
             <option value="PYG">PYG</option>
             <option value="RON">RON</option>
-            <option value="RUB">RUB</option>
+            <option value="RUB" selected>RUB</option>
             <option value="SAR">SAR</option>
             <option value="SEK">SEK</option>
             <option value="SGD">SGD</option>
@@ -130,7 +133,7 @@
             <option value="TRY">TRY</option>
             <option value="TWD">TWD</option>
             <option value="UAH">UAH</option>
-            <option value="USD" selected>USD</option>
+            <option value="USD">USD</option>
             <option value="UYU">UYU</option>
             <option value="VND">VND</option>
             <option value="ZAR">ZAR</option>
