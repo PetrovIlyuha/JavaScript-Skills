@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+      90deg,
+      red 0% 16.67%,
+      yellow 16.67% 33.33%,
+      lime 33.33% 50%,
+      cyan 50% 66.67%,
+      blue 66.67% 83.33%,
+      magenta 83.33% 100%
+    ),
+    conic-gradient(
+      from 180deg,
+      red 0%,
+      yellow 0 16.67%,
+      lime 0 33.33%,
+      cyan 0 50%,
+      blue 0 66.67%,
+      magenta 0 83.33%,
+      red 0 100%
+    );
+  background-blend-mode: screen, normal;
+  font-family: "Sigmar One", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+aside {
+  padding: 10px 20px;
+  width: 250px;
+  border-right: 1px solid red;
+}
+
+button {
+  background-color: white;
+  border: solid 1px #111;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-family: "Kelly Slab", cursive;
+  font-size: 1.2rem;
+}
+
+main {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+h2 {
+  border-bottom: 1px solid #111;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+h3 {
+  background-color: #fff;
+  border-bottom: 1px solid #111;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: lightslategray;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: 300;
+  margin: 20px 0 0;
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: lightgoldenrodyellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#total_wealth {
+  border-radius: 10px;
+}
