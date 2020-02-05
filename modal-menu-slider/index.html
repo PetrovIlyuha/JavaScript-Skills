@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
+    />
+    <title>Portfolio Landing Page</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./img/ava1.jpg" alt="avatar" />
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <button id="toggle" class="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+
+      <button id="open" class="cta-btn">Sign Up</button>
+    </header>
+    <div class="container">
+      <h2>What is Web Development?</h2>
+
+      <p>
+        Web development is the work involved in developing a web site for the
+        Internet (World Wide Web) or an intranet (a private network).[1] Web
+        development can range from developing a simple single static page of
+        plain text to complex web-based internet applications (web apps),
+        electronic businesses, and social network services.
+      </p>
+
+      <p>
+        For larger organizations and businesses, web development teams can
+        consist of hundreds of people (web developers) and follow standard
+        methods like Agile methodologies while developing websites.
+      </p>
+
+      <h2>What is my Goal?</h2>
+
+      <p>
+        An ever-growing set of tools and technologies have helped developers
+        build more dynamic and interactive websites. Further, web developers now
+        help to deliver applications as web services which were traditionally
+        only available as applications on a desk-based computer. This has
+        allowed for many opportunities to decentralize information and media
+        distribution.
+      </p>
+
+      <h2>Benefits</h2>
+      <ul>
+        <li>Lifetime Access</li>
+        <li>30-Day Money Back</li>
+        <li>Tailored Customer Support</li>
+      </ul>
+
+      <p>
+        Web development takes into account many security considerations, such as
+        data entry error checking through forms, filtering output, and
+        encryption.
+      </p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal_container" id="modal">
+      <div class="modal">
+        <button class="close_btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal_header">
+          <h3>Contact</h3>
+        </div>
+        <div class="modal_content">
+          <p>Contact to get high-quality service and support</p>
+          <form class="modal_form">
+            <div>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+                class="form_input"
+              />
+            </div>
+            <div>
+              <label for="email">Name</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                class="form_input"
+              />
+            </div>
+            <div>
+              <label for="password">Name</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Your Password"
+                class="form_input"
+              />
+            </div>
+            <div>
+              <label for="password2">Name</label>
+              <input
+                type="password"
+                id="password2"
+                placeholder="Confirm Password"
+                class="form_input"
+              />
+            </div>
+            <input type="submit" value="Submit" class="submit_btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
