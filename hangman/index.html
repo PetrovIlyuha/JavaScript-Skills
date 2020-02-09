@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>Hangman Game</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <h1>Спасти Висельника 🧨</h1>
+    <p>Угадайте Слово, которое мы спрятали...</p>
+    <div class="game-container">
+      <svg height="250" width="200" class="figure-container">
+        <!-- Stand for hanging -->
+        <line x1="60" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="50" />
+        <line x1="60" y1="20" x2="60" y2="230" />
+        <line x1="20" y1="230" x2="100" y2="230" />
+        <!-- Head -->
+        <circle cx="140" cy="70" r="20" class="figure-part" />
+        <!-- Body -->
+        <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+        <!-- Arms -->
+        <line x1="140" y1="100" x2="110" y2="115" class="figure-part" />
+        <line x1="140" y1="100" x2="170" y2="115" class="figure-part" />
+        <!-- Legs -->
+        <line x1="140" x2="160" y1="150" y2="190" class="figure-part" />
+        <line x1="140" x2="120" y1="150" y2="190" class="figure-part" />
+      </svg>
 
-</head>
-<body>
-  <h1>Hangman</h1>
-  <p>Guess the hidden word - Enter supposed letter!</p>
-  <div class="game-container">
-    <svg  height="250" width="200" class="figure-container">
-      <!-- Stand for hanging -->
-      <line x1="60" y1="20" x2="140" y2="20"/>
-      <line x1="140" y1="20" x2="140" y2="50"/>
-      <line x1="60" y1="20" x2="60" y2="230"/>
-      <line x1="20" y1="230" x2="100" y2="230"/>
-      <!-- Head -->
-      <circle cx="140" cy="70" r="20" class="figure-part"/>
-      <!-- Body -->
-      <line x1="140" y1="90" x2="140" y2="150" class="figure-part"/>
-      <!-- Arms -->
-      <line x1="140" y1="100" x2="110" y2="115" class="figure-part"/>
-      <line x1="140" y1="100" x2="170" y2="115" class="figure-part"/>
-      <!-- Legs -->
-      <line x1="140" x2="160" y1="150" y2="190" class="figure-part"/>
-      <line x1="140" x2="120" y1="150" y2="190" class="figure-part"/>
-    </svg>
-  </div>
-  <script src="/script.js"></script>
-</body>
+      <div class="wrong-letters-container">
+        <div id="wrong-letters"></div>
+      </div>
+
+      <div class="word" id="word"></div>
+
+      <div class="popup-container" id="popup-container">
+        <div class="popup">
+          <h2 id="final-message"></h2>
+          <button id="play-again">Спасти Человека</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- notification -->
+    <div class="notification_container" id="notification_container">
+      <p>Вы уже пробовали эту букву! Старайтесь...</p>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
 </html>
