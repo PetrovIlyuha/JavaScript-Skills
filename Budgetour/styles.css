@@ -1,0 +1,268 @@
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app_title {
+  text-align: center;
+  font-family: "Nova Flat";
+  font-size: 2rem;
+  width: 480px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin-top: 15px;
+  box-shadow: 8px 0px 13px -7px rgba(0, 0, 0, 0.75);
+  background-color: rgb(190, 40, 71);
+}
+
+.header {
+  background: radial-gradient(100% 225% at 100% 0%, #120037 0%, #000000 100%),
+    linear-gradient(35deg, #c0ffc7 0%, #17001f 75%),
+    linear-gradient(55deg, #2400ff 0%, #000000 100%),
+    linear-gradient(
+      90deg,
+      #ffe037 0%,
+      #ffe037 40%,
+      #1dcd9f 40%,
+      #1dcd9f 50%,
+      #088c6f 50%,
+      #088c6f 70%,
+      #23033c 70%,
+      #23033c 100%
+    ),
+    linear-gradient(
+      180deg,
+      #ff8fe5 0%,
+      #ff8fe5 45%,
+      #fbff64 45%,
+      #fbff64 60%,
+      #76e3ff 60%,
+      #76e3ff 80%,
+      #6eb6e7 80%,
+      #6eb6e7 100%
+    );
+  background-blend-mode: screen, overlay, overlay, darken, normal;
+  height: 8vh;
+  margin-bottom: 60px;
+  color: white;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid white;
+  box-shadow: var(--box-shadow);
+}
+
+.main_container_grid {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin-top: -10px;
+  font-family: Ubuntu;
+  font-size: 1.2em;
+}
+
+.main_container_grid:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 120vh;
+  background-image: url("./assets/back_img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 8%;
+  left: 0;
+  opacity: 0.24;
+  z-index: -1;
+}
+
+.container_functional {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-content: flex-start;
+  height: 100vh;
+  margin-top: 220px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money_plus {
+  color: #2ecc71;
+}
+
+.money_minus {
+  color: #c0392b;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 10px;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.btn {
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  width: 100%;
+  margin: 10px 0 30px;
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+/* Toast */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  background-color: crimson;
+  border-radius: 4px;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    top: 100;
+    left: 0;
+    opacity: 0;
+  }
+  to {
+    top: 100;
+    left: 50;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 100;
+    left: 50;
+    opacity: 1;
+  }
+  to {
+    top: 100;
+    left: 0;
+    opacity: 0;
+  }
+}
