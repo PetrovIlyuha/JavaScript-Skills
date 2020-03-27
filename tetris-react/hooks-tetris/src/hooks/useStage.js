@@ -21,6 +21,10 @@ export const useStage = (player, resetPlayer) => {
           }
         });
       });
+      // check if we collided
+      if (player.collided) {
+        resetPlayer();
+      }
       return newStage;
     };
 
