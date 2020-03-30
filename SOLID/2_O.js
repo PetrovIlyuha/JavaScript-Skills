@@ -37,6 +37,18 @@ class Rectangle extends Shape {
   }
 }
 
+class Triangle extends Shape {
+  constructor(a, b) {
+    super();
+    this.a = a;
+    this.b = b;
+  }
+
+  area() {
+    return (this.a * this.b) / 2;
+  }
+}
+
 class AreaCalculator {
   constructor(shapes = []) {
     this.shapes = shapes;
