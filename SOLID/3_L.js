@@ -1,35 +1,77 @@
-// Liskov substitution principle
+// // Liskov substitution principle
 
-class Person {}
+// class Person {}
 
-class Member extends Person {
-  access() {
-    console.log("You have access!");
+// class Member extends Person {
+//   access() {
+//     console.log("You have access!");
+//   }
+// }
+
+// class Guest extends Person {
+//   isGuest = true;
+// }
+
+// class FrontEnd extends Member {
+//   canCreateFrontend() {}
+// }
+
+// class BackEnd extends Member {
+//   canCreateBackend() {}
+// }
+
+// class PersonFromAnotherCompany extends Guest {
+//   access() {
+//     throw new Error("You have no access >> Go to your office now!");
+//   }
+// }
+
+// function openSecureDoor(member) {
+//   member.access();
+// }
+
+// openSecureDoor(new FrontEnd());
+// openSecureDoor(new BackEnd());
+// openSecureDoor(new PersonFromAnotherCompany());
+
+/**
+ * Example 2
+ */
+
+class Component {
+  isComponent = true;
+}
+
+class ComponentWithTemplating extends Component {
+  render() {
+    return `<div>Component</div>`;
   }
 }
 
-class Guest extends Person {
-  isGuest = true;
+class HigherOrderComponent extends Component {}
+
+class HeaderComponent extends ComponentWithTemplating {
+  onInit() {}
 }
 
-class FrontEnd extends Person {
-  canCreateFrontend() {}
+class FooterComponent extends ComponentWithTemplating {
+  afterInit() {}
 }
 
-class BackEnd extends Person {
-  canCreateBackend() {}
-}
+class HOC extends HigherOrderComponent {
+  render() {
+    throw new Error("Render is not available in HOCs...");
+  }
 
-class PersonFromAnotherCompany extends Person {
-  access() {
-    throw new Error("You have no access >> Go to your office now!");
+  wrapComponent(component) {
+    component.wrapped = true;
+    return component;
   }
 }
 
-function openSecureDoor(member) {
-  member.access();
+function renderComponent(component) {
+  component.render();
 }
 
-openSecureDoor(new FrontEnd());
-openSecureDoor(new BackEnd());
-openSecureDoor(new PersonFromAnotherCompany());
+renderComponent(new HeaderComponent());
+renderComponent(new FooterComponent());
